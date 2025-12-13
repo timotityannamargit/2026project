@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideXspot ZRT.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+</head>
+<header>
+  
+    <div class="logo"></div>
+     <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#fooldal">Főoldal</a></li>
+            <li><a href="szolgaltatasok.php">Szolgáltatások</a></li>
+            <li><a href="rolunk.php">Rólunk</a></li>
+            <li><a href="bejelentkezes.php">Bejelentkezés</a></li>
+            <li><a href="registration.php">Regisztráció</a></li>
+            <li><a href="kapcsolat.php">Kapcsolat</a></li>
+            <li><a href="partnerek.php">További partnereink</a></li>
+        </ul>
+    </nav>
+  </header>
+<script>
+    // Hamburger menü JS
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
+  <section class="hero">
+    <div class="hero-image"></div>
+    <div class="hero-content">
+      <h4>RideXspot ZRT.</h4>
+      <h1>AUTÓBÉRLÉS - <br>BIZTOSÍTÁS, KÁRRENDEZÉS, ASSISTANCE</h1>
+
+      <div class="buttons">
+        <a href="#" class="btn">Tekintse meg ajánlatainkat →</a>
+        <a href="#" class="btn">Egyedi ajánlatkérés →</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <p>100%-ban magyar tulajdonú cég</p>
+          <p class="stat-number">0+ év</p>
+        </div>
+        <div class="stat">
+          <p>Gépjármű-kereskedői és -flottakezelési tapasztalat</p>
+          <p class="stat-number">0+ év</p>
+        </div>
+        <div class="stat">
+          <p>Lefedettség szerviz- és márkakereskedői fronton</p>
+          <p class="stat-number">Országos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <footer class="car-footer">
+    
+    <div class="footer-social">
+      <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+      <a href="#"><img src="tiktok-icon.png" alt="TikTok"></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AutoDrive. Minden jog fenntartva.</p>
+    <span>📞 +36 30 123 4567</span>
+    <span>⏰ H-P: 8:00 - 18:00</span>
+    
+  </div>
+</footer>
+
+</body>
+</html>
