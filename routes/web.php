@@ -6,8 +6,8 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\RepairController;
 use App\Http\Controllers\CarController;
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('pages.home');
+})->name("home");
 // Cars
 Route::resource('cars', CarController::class);
 
@@ -27,3 +27,22 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('repairs', RepairController::class);
 
 });
+
+Route::get('/helloworld', function (){
+    return view('helloWorld');
+});
+
+Route::get('/bejelentkezes', function(){
+    return view('bejelentkezes');
+});
+
+Route::post('/contact', function (Request $request) {
+    Storage::append('contact_log.txt', json_encode($request->all()));
+    return redirect()
+        ->route('contact')
+        ->with('success', true);
+})->name('contact.submit');
+
+Route::get('/szolgaltatasok', function(){
+    return view('pages.szolgaltatasok');
+})->name("szolgaltatasok");
