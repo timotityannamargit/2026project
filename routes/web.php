@@ -46,3 +46,7 @@ Route::post('/contact', function (Request $request) {
 Route::get('/szolgaltatasok', function(){
     return view('pages.szolgaltatasok');
 })->name("szolgaltatasok");
+
+Route::get('/kapcsolat', function () {
+    return view('kapcsolat');
+});

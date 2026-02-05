@@ -11,12 +11,10 @@
                     <p class="lead">Ismerd meg szervizünk szolgáltatásait — megbízható, precíz és professzionális ellátás amerikai izomautókhoz és egyéb járművekhez.</p>
                 </div>
                 <div class="hero-visual" aria-hidden="true">
-                    <!-- dekorációs fémes csillogás -->
                 </div>
             </div>
         </section>
 
-        <!-- Kártyás grid a fő szolgáltatásokkal -->
         <section class="cards wrap" id="szolgaltatasok">
             <h2 class="section-title">Szerviz szolgáltatások</h2>
             <div class="grid">
