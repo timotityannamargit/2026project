@@ -5,14 +5,9 @@
   color: white;
   line-height: 1.1;
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
 
 header {
-  background: #bcbec0;
+  background: #555454;
   padding: 40px 20px;
 }
 
@@ -26,7 +21,7 @@ header {
   letter-spacing: 0.5px;
 }
 
-.navbar ul {
+.navbar ul  {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -41,7 +36,9 @@ header {
   font-weight: 600;
   transition: 0.3s;
 }
-
+.navbar a.active {
+    color: #ffcc00;
+}
 .navbar a:hover {
   color: #ffcc00;
 }

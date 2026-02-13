@@ -1,5 +1,7 @@
-@extends("welcome")
-
+@extends("layout")
+@push('pages')
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+@endpush
 
 @section('content')
 <section class="hero">

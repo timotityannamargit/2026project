@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="hu">
 <head>
-    <title>Layout test</title>
-    <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/szolgaltatasok.css') }}">
-    @stack('page-styles')
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideXspot ZRT.</title>
+    <link rel="stylesheet" href="{{ asset("css/global.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/menu.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/footer.css") }}">
+    <script src="script.js"></script>
+    @stack("pages")
 </head>
 <body>
-    <header>
-        @include('partials.menu')
-    </header>
-    <main>
-        @yield('content', 'Default page content goes here.')
-    </main>
-    <footer>
-        @include('partials.footer')
-    </footer>
+@include("partials.menu")
+<script>
+    // Hamburger menü JS
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
+  @yield("content")
+
+    @include("partials.footer")
+
 </body>
 </html>

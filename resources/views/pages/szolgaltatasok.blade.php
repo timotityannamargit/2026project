@@ -1,4 +1,4 @@
-@extends("welcome")
+@extends("layout")
 @push('pages')
     <link rel="stylesheet" href="{{ asset('css/szolgaltatasok.css') }}">
 @endpush
