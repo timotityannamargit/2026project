@@ -44,25 +44,23 @@ Route::get('/bejelentkezes', function () {
         ->with('success', true);
 })->name('contact.submit');*/
 
-Route::get('/szolgaltatasok', function () {
-    return view('pages.szolgaltatasok');
-})->name("szolgaltatasok");
+Route::get('/szolgaltatasok', [ServiceController::class, 'index'])->name("szolgaltatasok");
 
 Route::get('/kapcsolat', function () {
     return view('pages.kapcsolat');
 })->name("kapcsolat");
 
 Route::get('/tovabbi_partnereink', function () {
-    return view('pages.kapcsolat');
+    return view('pages.partnerek');
 })->name("tovabbi_partnereink");
 
 Route::get('/rolunk', function () {
-    return view('pages.kapcsolat');
+    return view('pages.rolunk');
 })->name("rolunk");
 
-Route::get('/regisztracio', function () {
+/*Route::get('/regisztracio', function () {
     return view('pages.kapcsolat');
-})->name("regisztracio");
+})->name("regisztracio");*/
 
 Route::post('/bejelentkezes', function (Request $request) {
     $users = [

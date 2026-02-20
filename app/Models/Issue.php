@@ -2,35 +2,22 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Collection;
-
 /*
  * @property int $id
  * @property string $name
  * @property string $icon
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int $price
- * @property int $duration
  * 
  * 
- * @property Collection<Label> $labels 
 */
-class Service extends Model
+class Issue extends Model
 {
-    /** @use HasFactory<\Database\Factories\ServiceFactory> */
-    use HasFactory;
     /**
      * All fields inside the $guarded array are not mass-assignable
      *
      * @var array
      */
     protected $guarded = ['id'];
-
-    public function labels()
-    {
-        return $this->hasMany(Label::class, 'service_id');
-    }
 }

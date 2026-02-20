@@ -1,4 +1,4 @@
-@extends("layout")
+@extends('layout')
 @push('pages')
     <link rel="stylesheet" href="{{ asset('css/szolgaltatasok.css') }}">
 @endpush
@@ -8,7 +8,8 @@
             <div class="hero-inner wrap">
                 <div class="hero-text">
                     <h1>Ott kezdődik az autód szíve, ahol a mi munkánk indul.</h1>
-                    <p class="lead">Ismerd meg szervizünk szolgáltatásait — megbízható, precíz és professzionális ellátás amerikai izomautókhoz és egyéb járművekhez.</p>
+                    <p class="lead">Ismerd meg szervizünk szolgáltatásait — megbízható, precíz és professzionális ellátás
+                        amerikai izomautókhoz és egyéb járművekhez.</p>
                 </div>
                 <div class="hero-visual" aria-hidden="true">
                 </div>
@@ -18,84 +19,36 @@
         <section class="cards wrap" id="szolgaltatasok">
             <h2 class="section-title">Szerviz szolgáltatások</h2>
             <div class="grid">
-                <article class="card">
-                    <div class="card-icon"><svg>
-                            <use href="#icon-engine"></use>
-                        </svg></div>
-                    <h3>Motor & hajtás</h3>
-                    <ul>
-                        <li>Teljes körű motorvizsgálat</li>
-                        <li>Szívó- és kipufogórendszer javítás</li>
-                        <li>Tuning & teljesítményhangolás</li>
-                    </ul>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon"><svg>
-                            <use href="#icon-brake"></use>
-                        </svg></div>
-                    <h3>Fék & futómű</h3>
-                    <ul>
-                        <li>Fékbetét és tárcsa csere</li>
-                        <li>Lengéscsillapító és futómű beállítás</li>
-                        <li>Kerekek, centrírozás</li>
-                    </ul>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon"><svg>
-                            <use href="#icon-diagnostic"></use>
-                        </svg></div>
-                    <h3>Diagnosztika</h3>
-                    <ul>
-                        <li>OBD hibakód olvasás</li>
-                        <li>Elektronikai hibakeresés (ABS, ESP stb.)</li>
-                        <li>Check engine, szenzorok vizsgálata</li>
-                    </ul>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon"><svg>
-                            <use href="#icon-battery"></use>
-                        </svg></div>
-                    <h3>Elektromos rendszerek</h3>
-                    <ul>
-                        <li>Akkumulátor csere és töltés</li>
-                        <li>Indítási problémák javítása</li>
-                        <li>Elektromos diagnosztika</li>
-                    </ul>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon"><svg>
-                            <use href="#icon-wrench"></use>
-                        </svg></div>
-                    <h3>Tuning & kiegészítők</h3>
-                    <ul>
-                        <li>Személyre szabott tuning megoldások</li>
-                        <li>Alkatrész beszerzés és beszerelés</li>
-                        <li>Általános karbantartás</li>
-                    </ul>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon"><svg>
-                            <use href="#icon-wheel"></use>
-                        </svg></div>
-                    <h3>Gumi & kerekek</h3>
-                    <ul>
-                        <li>Gumi csere, centrírozás</li>
-                        <li>Kerék kiegyensúlyozás</li>
-                        <li>Pick-up / SUV kerekek kezelése</li>
-                    </ul>
-                </article>
+                @foreach ($services as $service)
+                    <article class="card">
+                        <div class="card-icon"><svg>
+                                <use href="{{ $service->icon }}"></use>
+                            </svg></div>
+                        <h3>{{ $service->name }}</h3>
+                        <ul>
+                            @foreach ($service->labels as $label)
+                                <li>{{ $label->content }}</li>
+                            @endforeach
+                        </ul>
+                    </article>
+                @endforeach
             </div>
         </section>
 
         <!-- Hibajelenségek (ikonos lista) -->
+
+        
         <section class="issues wrap">
             <h2 class="section-title">Gyakori hibajelenségek</h2>
             <div class="issues-grid">
+                @foreach ($issues as $issue)
+                    <div class="issue">
+                    <svg class="issue-icon">
+                        <use href="{{ $issue->icon }}"></use>
+                    </svg>
+                    <p>{{ $issue->name }}</p>
+                </div>
+                @endforeach
                 <div class="issue">
                     <svg class="issue-icon">
                         <use href="#icon-brake"></use>
@@ -129,6 +82,4 @@
             <a class="cta" href="#">Időpont foglalás</a>
         </section>
     </main>
-
-
 @endsection
