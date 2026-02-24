@@ -50,12 +50,7 @@ body {
   font-weight: 500;
 }
 
-.motto {
-  display: inline-block;
-  margin: 10px 0 18px;
-  color: #fff;
-  font-weight: 700;
-}
+
 
 
 .right {
@@ -115,8 +110,8 @@ body {
 }
 
 .partner-table thead {
-    background-color: #111;
-    color: #fff;
+    background-color: #807e7e;
+    color: #ebe2e2;
 }
 
 .partner-table th,
