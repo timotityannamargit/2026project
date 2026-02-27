@@ -3,11 +3,7 @@
     <link rel="stylesheet" href="{{ asset('css/rolunk.css') }}">
 @endpush
 @section('content')
-     <header class="site-header">
-    <nav class="nav">
-      <a href="index.html" class="logo">RideXspot ZRT.</a>
-    </nav>
-  </header>
+
 
   <main class="about-section" role="main" aria-labelledby="rolunk-heading">
     <div class="container">

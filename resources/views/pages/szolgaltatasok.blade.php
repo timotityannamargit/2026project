@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="{{ asset('css/szolgaltatasok.css') }}">
 @endpush
 @section('content')
+
     <main class="main">
         <section class="hero">
             <div class="hero-inner wrap">

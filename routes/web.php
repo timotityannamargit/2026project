@@ -14,7 +14,7 @@ Route::get('/', function () {
 Route::resource('cars', CarController::class);
 
 // Appointments
-Route::resource('appointments', AppointmentController::class);
+Route::resource('cappointments', AppointmentController::class);
 
 // Services
 Route::resource('services', ServiceController::class);
@@ -24,7 +24,7 @@ Route::resource('repairs', RepairController::class);
 Route::middleware(['auth'])->group(function () {
 
     Route::resource('cars', CarController::class);
-    Route::resource('appointments', AppointmentController::class);
+    Route::resource('appointment', AppointmentController::class);
     Route::resource('services', ServiceController::class);
     Route::resource('repairs', RepairController::class);
 });

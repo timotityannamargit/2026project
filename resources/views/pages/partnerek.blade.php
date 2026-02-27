@@ -5,6 +5,7 @@
 @endpush
 
 @section('content')
+
 <main class="partnereink-section" role="main" aria-labelledby="partnereink-heading">
     <div class="container">
         <aside class="left">
